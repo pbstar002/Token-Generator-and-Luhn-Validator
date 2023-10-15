@@ -1,5 +1,6 @@
 package com.generator.service;
 
+import java.security.SecureRandom;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -7,7 +8,7 @@ import java.util.Random;
 @Service
 public class TokenService {
     
-    private final Random random = new Random();
+    private final Random random = new SecureRandom();
 
     public String generateToken(String digits) {
         if (digits == null || digits.isEmpty()) {
